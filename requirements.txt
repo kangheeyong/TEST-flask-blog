@@ -1,4 +1,7 @@
 flask
 flask-wtf
 flask-sqlalchemy
+flask-bcrypt
+flask-login
+email_validator
 pytest
