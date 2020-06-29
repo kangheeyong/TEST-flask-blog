@@ -5,7 +5,6 @@ from flaskblog import app, db, bcrypt
 from flaskblog.forms import RegistrationForm, LoginForm
 from flaskblog.models import User
 
-
 posts = [
     {
         'author': 'Corey Schafer',

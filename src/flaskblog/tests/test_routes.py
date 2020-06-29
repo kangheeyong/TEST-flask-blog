@@ -23,6 +23,6 @@ def test_response_200():
     response = app.test_client().post('/register')
     assert response.status_code == 200
 
-    response = app.test_client().get('/logout')
-    assert response.status_code == 200
+    # response = app.test_client().get('/logout')
+    # assert response.status_code == 200
 
