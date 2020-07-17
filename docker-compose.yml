@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+    web:
+        restart: always
+        build: ./web
+        ports:
+            - "8000:18080" # flask
+        volumes:
+            - ./web:/app
+        env_file: .env
+        command: ./bootup.sh
+
+
