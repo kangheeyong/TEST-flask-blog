@@ -8,6 +8,7 @@ RUN pip install flask-bcrypt
 RUN pip install flask-login
 RUN pip install email_validator
 RUN pip install pytest
+RUN pip install Pillow
 
 RUN mkdir -p /app
 
