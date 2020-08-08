@@ -3,6 +3,7 @@ flask-wtf
 flask-sqlalchemy
 flask-bcrypt
 flask-login
+flask-mail
 email_validator
 pytest
 Pillow
