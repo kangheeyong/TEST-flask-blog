@@ -9,11 +9,13 @@
 
 ### virtualenv
 - create
-  ```virtualenv --python=python3.8 .env-flask```
+  - ```virtualenv --python=python3.8 .env-flask```
 - activate
-  ```source .env-flask/bin/activate```
+  - ```source .env-flask/bin/activate```
 - deavtivate
-  ```deactivate```
+  - ```deactivate```
+### gmail 계정 링크 연결
+- https://security.google.com/settings/security/apppassword
 
 ### 참고
   - [project docker & docker-compose 구성](https://github.com/mayjune/DjangoTemplate)
