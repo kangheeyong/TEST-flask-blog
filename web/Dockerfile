@@ -6,6 +6,7 @@ RUN pip install flask-wtf
 RUN pip install flask-sqlalchemy
 RUN pip install flask-bcrypt
 RUN pip install flask-login
+RUN pip install flask-mail
 RUN pip install email_validator
 RUN pip install pytest
 RUN pip install Pillow
