@@ -19,3 +19,4 @@
 
 ### 참고
   - [project docker & docker-compose 구성](https://github.com/mayjune/DjangoTemplate)
+  - [nginx overview](https://velog.io/@minholee_93/Nginx-Overview-Install)
