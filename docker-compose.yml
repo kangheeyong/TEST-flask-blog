@@ -9,8 +9,11 @@ services:
         volumes:
             - ./web:/app
         env_file: 
-          - .env
-          - .env_secret
-        command: ./bootup.sh
+            - .env
+            - .env_secret
+        environment:
+            - FLASK_APP=run.py
+            - PORT=18080 # flask
+        command: gunicorn -c /app/gunicorn_conf.py run:app
 
 

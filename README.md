@@ -20,3 +20,4 @@
 ### 참고
   - [project docker & docker-compose 구성](https://github.com/mayjune/DjangoTemplate)
   - [nginx overview](https://velog.io/@minholee_93/Nginx-Overview-Install)
+  - [dockr - supervisor (nginx - gunicon - django) 서버 구성](https://github.com/elastic7327/django-gunicorn-nginx-docker)
