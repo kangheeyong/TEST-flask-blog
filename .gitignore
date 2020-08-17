@@ -5,5 +5,5 @@
 __pycache__
 .DS_Store
 .idea
-secret
+.env_secret
 .vscode

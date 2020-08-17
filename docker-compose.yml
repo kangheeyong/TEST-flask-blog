@@ -8,7 +8,9 @@ services:
             - "8000:18080" # flask
         volumes:
             - ./web:/app
-        env_file: .env
+        env_file: 
+          - .env
+          - .env_secret
         command: ./bootup.sh
 
 

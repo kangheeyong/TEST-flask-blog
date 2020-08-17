@@ -10,6 +10,7 @@ RUN pip install flask-mail
 RUN pip install email_validator
 RUN pip install pytest
 RUN pip install Pillow
+RUN pip install gunicorn
 
 RUN mkdir -p /app
 
