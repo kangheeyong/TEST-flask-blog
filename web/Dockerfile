@@ -14,6 +14,8 @@ RUN pip install email_validator
 RUN pip install pytest
 RUN pip install Pillow
 RUN pip install gunicorn
+RUN pip install "celery[redis]"
+RUN pip install redis
 
 RUN mkdir -p /app
 

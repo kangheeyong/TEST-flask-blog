@@ -1,11 +1,11 @@
 import os
 import secrets
 
-from flask import current_app, url_for
+from flask import current_app
 from PIL import Image
 
 from flask_mail import Message
-from flaskblog import mail
+from flaskblog import mail, celery_app
 
 
 def save_picture(form_picture):
@@ -24,14 +24,15 @@ def save_picture(form_picture):
     return picture_fn
 
 
-def send_reset_email(user):
-    token = user.get_reset_token()
+@celery_app.task
+def send_reset_email(email, url):
     msg = Message(
-        "Password Reset Request", sender="noreply@demo.com", recipients=[user.email]
+        "Password Reset Request", sender="noreply@demo.com", recipients=[email]
     )
     msg.body = f"""To reset your password, visit the following link:
-{url_for('users.reset_token', token=token, _external=True)}
+{url}
 
 If you did not make this request then simply ignore this email and no changes will be made.
 """
     mail.send(msg)
+

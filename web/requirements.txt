@@ -8,3 +8,5 @@ email_validator
 pytest
 Pillow
 gunicorn
+"celery[redis]"
+redis

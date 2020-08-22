@@ -97,7 +97,8 @@ def reset_request():
     form = RequestResetForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
-        send_reset_email(user)
+        url = url_for('users.reset_token', token=user.get_reset_token(), _external=True)
+        send_reset_email.delay(user.email, url)
         flash(
             "An email has been sent with instructions to reset your password.", "info"
         )
