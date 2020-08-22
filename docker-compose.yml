@@ -1,5 +1,9 @@
 version: "3"
 
+
+volumes:
+  redisdata:
+
 services:
     web:
         restart: always
@@ -15,5 +19,13 @@ services:
             - FLASK_APP=run.py
             - PORT=18080 # flask
         command: gunicorn -c /app/gunicorn_conf.py run:app
+
+    redis:
+        restart: always
+        image: redis:latest
+        expose:
+            - "6379"
+        volumes:
+            - redisdata:/data
 
 

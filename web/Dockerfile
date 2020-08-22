@@ -1,5 +1,8 @@
 FROM python:3.8
 
+RUN apt-get update
+RUN apt-get install redis-tools -y
+
 RUN pip install --upgrade pip
 RUN pip install flask
 RUN pip install flask-wtf
